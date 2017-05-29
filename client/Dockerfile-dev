@@ -1,0 +1,5 @@
+From reactql-app
+
+ADD . /usr/src/App
+
+CMD yarn start

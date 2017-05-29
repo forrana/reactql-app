@@ -1,0 +1,116 @@
+createdWith: pnpm@0.68.0
+dependencies:
+  react-apollo@^1.2.0: 1.2.0
+  redux@^3.6.0: 3.6.0
+packages:
+  /@types/async/2.0.40: ac02de68e66c004a61b7cb16df8b1db3a254cca9
+  /@types/graphql/0.9.1: b04ebe84bc997cc60dbea2ed4d0d4342c737f99d
+  /@types/isomorphic-fetch/0.0.34: 3c3483e606c041378438e951464f00e4e60706d6
+  /apollo-client/1.3.0:
+    dependencies:
+      '@types/async': 2.0.40
+      '@types/graphql': 0.9.1
+      '@types/isomorphic-fetch': 0.0.34
+      graphql: 0.10.1
+      graphql-anywhere: 3.0.1
+      graphql-tag: 2.2.0
+      redux: 3.6.0
+      symbol-observable: 1.0.4
+      whatwg-fetch: 2.0.3
+    resolution: e155d46cbf8fba80e5718f6451338260cf076d1b
+  /asap/2.0.5: 522765b50c3510490e52d7dcfe085ef9ba96958f
+  /core-js/1.2.7: 652294c14651db28fa93bd2d5ff2983a4f08c636
+  /encoding/0.1.12:
+    dependencies:
+      iconv-lite: 0.4.17
+    resolution: 538b66f3ee62cd1ab51ec323829d1f9480c74beb
+  /fbjs/0.8.12:
+    dependencies:
+      core-js: 1.2.7
+      isomorphic-fetch: 2.2.1
+      loose-envify: 1.3.1
+      object-assign: 4.1.1
+      promise: 7.1.1
+      setimmediate: 1.0.5
+      ua-parser-js: 0.7.12
+    resolution: 10b5d92f76d45575fd63a217d4ea02bea2f8ed04
+  /graphql-anywhere/3.0.1: 73531db861174c8f212eafb9f8e84944b38b4e5a
+  /graphql-tag/2.2.0: 9ea24f35a19aab1be1e55675928344d84d852905
+  /graphql/0.10.1:
+    dependencies:
+      iterall: 1.1.1
+    resolution: 75c93c2ce73aeb5bae2eefb555a8e9e39c36027d
+  /hoist-non-react-statics/1.2.0: aa448cf0986d55cc40773b17174b7dd066cb7cfb
+  /iconv-lite/0.4.17: 4fdaa3b38acbc2c031b045d0edcdfe1ecab18c8d
+  /invariant/2.2.2:
+    dependencies:
+      loose-envify: 1.3.1
+    resolution: 9e1f56ac0acdb6bf303306f338be3b204ae60360
+  /is-stream/1.1.0: 12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44
+  /isomorphic-fetch/2.2.1:
+    dependencies:
+      node-fetch: 1.7.0
+      whatwg-fetch: 2.0.3
+    resolution: 611ae1acf14f5e81f729507472819fe9733558a9
+  /iterall/1.1.1: f7f0af11e9a04ec6426260f5019d9fcca4d50214
+  /js-tokens/3.0.1: 08e9f132484a2c45a30907e9dc4d5567b7f114d7
+  /lodash-es/4.17.4: dcc1d7552e150a0640073ba9cb31d70f032950e7
+  /lodash.flatten/4.4.0: f31c22225a9632d2bbf8e4addbef240aa765a61f
+  /lodash.isequal/4.5.0: 415c4478f2bcc30120c22ce10ed3226f7d3e18e0
+  /lodash.isobject/3.0.2: 3c8fb8d5b5bf4bf90ae06e14f2a530a4ed935e1d
+  /lodash.pick/4.4.0: 52f05610fff9ded422611441ed1fc123a03001b3
+  /lodash/4.17.4: 78203a4d1c328ae1d86dca6460e369b57f4055ae
+  /loose-envify/1.3.1:
+    dependencies:
+      js-tokens: 3.0.1
+    resolution: d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848
+  /node-fetch/1.7.0:
+    dependencies:
+      encoding: 0.1.12
+      is-stream: 1.1.0
+    resolution: 3ff6c56544f9b7fb00682338bb55ee6f54a8a0ef
+  /object-assign/4.1.1: 2109adc7965887cfc05cbbd442cac8bfbb360863
+  /promise/7.1.1:
+    dependencies:
+      asap: 2.0.5
+    resolution: 489654c692616b8aa55b0724fa809bb7db49c5bf
+  /prop-types/15.5.10:
+    dependencies:
+      fbjs: 0.8.12
+      loose-envify: 1.3.1
+    resolution: 2797dfc3126182e3a95e3dfbb2e893ddd7456154
+  /react-apollo/1.2.0:
+    dependencies:
+      apollo-client: 1.3.0
+      graphql-anywhere: 3.0.1
+      graphql-tag: 2.2.0
+      hoist-non-react-statics: 1.2.0
+      invariant: 2.2.2
+      lodash.flatten: 4.4.0
+      lodash.isequal: 4.5.0
+      lodash.isobject: 3.0.2
+      lodash.pick: 4.4.0
+      object-assign: 4.1.1
+      prop-types: 15.5.10
+      react-dom: 15.5.4
+    resolution: 4dc3f61bad9b2fe2c450bc7fbd4fab52004de474
+  /react-dom/15.5.4:
+    dependencies:
+      fbjs: 0.8.12
+      loose-envify: 1.3.1
+      object-assign: 4.1.1
+      prop-types: 15.5.10
+    resolution: ba0c28786fd52ed7e4f2135fe0288d462aef93da
+  /redux/3.6.0:
+    dependencies:
+      lodash: 4.17.4
+      lodash-es: 4.17.4
+      loose-envify: 1.3.1
+      symbol-observable: 1.0.4
+    resolution: 887c2b3d0b9bd86eca2be70571c27654c19e188d
+  /setimmediate/1.0.5: 290cbb232e306942d7d7ea9b83732ab7856f8285
+  /symbol-observable/1.0.4: 29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d
+  /ua-parser-js/0.7.12: 04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb
+  /whatwg-fetch/2.0.3: 9c84ec2dcf68187ff00bc64e1274b442176e1c84
+registry: 'https://registry.npmjs.org/'
+version: 2

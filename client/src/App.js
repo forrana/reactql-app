@@ -5,7 +5,7 @@ import './App.css';
 
 
 // Apollo client deps
-import ApolloClient from 'apollo-client';
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import {
   graphql,
   ApolloProvider
@@ -17,16 +17,19 @@ import {
   makeExecutableSchema,
   addMockFunctionsToSchema
 } from 'graphql-tools';
- import { mockNetworkInterfaceWithSchema } from 'apollo-test-utils';
+// import { mockNetworkInterfaceWithSchema } from 'apollo-test-utils';
  import { typeDefs } from './schema';
 
 const schema = makeExecutableSchema({ typeDefs });
 addMockFunctionsToSchema({ schema });
 
-const mockNetworkInterface = mockNetworkInterfaceWithSchema({ schema });
+// const mockNetworkInterface = mockNetworkInterfaceWithSchema({ schema });
+const networkInterface = createNetworkInterface({
+  uri: 'http://localhost:8080/graphql',
+});
 
 const client = new ApolloClient({
-    networkInterface: mockNetworkInterface,
+    networkInterface: networkInterface,
 });
 
 const channelsListQuery = gql`
@@ -60,7 +63,7 @@ class App extends Component {
          <div className="App">
            <div className="App-header">
              <img src={logo} className="App-logo" alt="logo" />
-             <h2>Welcome to Apollo</h2>
+             <h2>Welcome to Apollo from docker-compose</h2>
            </div>
            <ChannelsListWithData />
          </div>

@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+    web:
+      image: reactql-app
+      restart: always
+      build:
+        context: ./client
+        dockerfile: ./client/Dockerfile-client-dev
+      ports:
+        - '3000:3000'
+      expose:
+          - 3000
+      volumes:
+        - ./client:/usr/src/app
+      user: node
+      working_dir: /usr/src/app
+      command: yarn start
+      depends_on:
+        - server
+
+    server:
+      image: reactql-server
+      restart: always
+      build:
+        context: ./server
+        dockerfile: ./server/Dockerfile-server
+      expose:
+        - 8080
+      ports:
+        - '8080:8080'
+      volumes:
+        - ./server:/usr/src/app
+      user: node
+      working_dir: /usr/src/app
+      command: yarn start
+      depends_on:
+        - db
+      environment:
+        - DB_HOST=db
+
+    db:
+      image: mongo

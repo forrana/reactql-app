@@ -1,0 +1,11 @@
+{
+  "name": "reactql-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/forrana/reactql-app.git",
+  "author": "forrana <forrana@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+	"install-deps": "cd ./client/ && yarn && cd ../server && yarn"
+  }
+}

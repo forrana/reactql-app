@@ -7,10 +7,12 @@ services:
       restart: always
       build:
         context: ./client
-        dockerfile: ./client/Dockerfile-client-dev
+        dockerfile: Dockerfile
       volumes:
         - ./client:/usr/src/app
       user: node
+      ports: 
+        - "3000:3000"
       command: yarn start
       depends_on:
         - server
@@ -20,10 +22,12 @@ services:
       restart: always
       build:
         context: ./server
-        dockerfile: ./server/Dockerfile-server
+        dockerfile: Dockerfile-server
       volumes:
         - ./server:/usr/src/app
       user: node
+      ports: 
+        - "8080:8080"
       command: yarn start
       depends_on:
         - db

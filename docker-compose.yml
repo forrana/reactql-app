@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
     web:
       image: reactql-app
       restart: always
@@ -11,7 +10,7 @@ services:
       volumes:
         - ./client:/usr/src/app
       user: node
-      ports: 
+      ports:
         - "3000:3000"
       command: yarn start
       depends_on:
@@ -26,7 +25,7 @@ services:
       volumes:
         - ./server:/usr/src/app
       user: node
-      ports: 
+      ports:
         - "8080:8080"
       command: yarn start
       depends_on:
@@ -36,3 +35,15 @@ services:
 
     db:
       image: mongo
+      ports:
+        - "27017:27017"
+      volumes:
+        - mongodata:/data/db
+
+    mongodata:
+      image: tianon/true
+      volumes:
+        - mongodata:/data/db
+        
+volumes:
+    mongodata:

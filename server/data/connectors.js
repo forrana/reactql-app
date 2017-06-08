@@ -1,6 +1,7 @@
 import Sequelize from 'sequelize';
 import casual from 'casual';
 import _ from 'lodash';
+import rp from 'request-promise';
 
 const db = new Sequelize('blog', null, null, {
   dialect: 'sqlite',
@@ -47,8 +48,18 @@ db.sync({ force: true }).then(() => {
   });
 });
 
+const FortuneCookie = {
+  getOne() {
+    return rp('http://fortunecookieapi.herokuapp.com/v1/cookie')
+      .then((res) => JSON.parse(res))
+      .then((res) => {
+        return res[0].fortune.message;
+      });
+  },
+};
+
 const Author = db.models.author;
 const Post = db.models.post;
 const Channel = db.models.channels;
 
-export { Author, Post, Channel };
+export { Author, Post, Channel, FortuneCookie };

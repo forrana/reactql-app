@@ -1,11 +1,11 @@
-.answersForm-body {
+.body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 30vh;
 }
 
-.answersForm-actions {
+.actions {
   display: flex;
   justify-content: space-between;
 }

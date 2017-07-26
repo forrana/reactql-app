@@ -1,7 +1,7 @@
 // App deps
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import style from './App.css';
 
 import CreateForm from '../createForm/createForm';
 
@@ -62,12 +62,12 @@ class App extends Component {
    render() {
      return (
        <ApolloProvider client={client}>
-         <div className="App">
-           <div className="App-header">
-             <img src={logo} className="App-logo" alt="logo" />
-             <h2>Welcome to Apollo from docker-compose !!!sdf!!!</h2>
+         <div className={style.App}>
+           <div className={style.header}>
+             <img src={logo} className={style.logo} alt="logo" />
+             <h2>Welcome to Apollo from docker-compose !!!</h2>
            </div>
-           <div className="App-body">
+           <div className={style.body}>
              <CreateForm/>
            </div>
          {/*  <ChannelsListWithData /> */}

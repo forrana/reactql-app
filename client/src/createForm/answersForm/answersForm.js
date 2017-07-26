@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './answersForm.css';
+import style from './answersForm.css';
 
 
  const AnswersListItem = () => {
     return (
-      <div className = "answersForm-answers-item">
+      <div className = {style.item}>
         <input type = "text"/>
         <button>Remove</button>
       </div>
@@ -14,9 +14,9 @@ import './answersForm.css';
 class AnswersForm extends Component {
   render() {
     return (
-      <div className = "answersForm-body" >
+      <div className = {style.body} >
           <button>Add</button>
-          <div className = "answesForm-answers">
+          <div className = {style.answers}>
             <AnswersListItem/>
           </div>
       </div>

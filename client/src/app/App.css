@@ -20,6 +20,11 @@ html, body {
   color: white;
 }
 
+.App-body {
+  display: flex;
+  justify-content: space-around;
+}
+
 .App-intro {
   font-size: large;
 }
@@ -31,6 +36,7 @@ ul {
 li {
   padding: 10px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
   width: 20%;

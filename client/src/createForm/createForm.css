@@ -1,0 +1,16 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  height: 30vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
